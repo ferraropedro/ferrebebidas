@@ -67,6 +67,31 @@ function crearCard(producto) {
 
         dibujarCarrito()
 
+        swal({
+            title: "¡Producto agregado!",
+            text: `${producto.nombre} agregado al carrito de compra.`,
+            icon: "success",
+            buttons: {
+                cerrar: {
+                    text: "Cerrar",
+                    value: false
+                },
+                carrito: {
+                    text: "Ir a carrito",
+                    value: true
+                }
+            }
+        }).then((irACarrito) => {
+
+            if(irACarrito) {
+                //swal("Vamos al carrito!");
+                const myModal = new bootstrap.Modal(document.getElementById('exampleModal'), {keyboard: true});
+                const modalToggle = document.getElementById('toggleMyModal'); 
+                myModal.show(modalToggle);
+
+            }
+        });
+
     }
 
     return carta;
@@ -103,4 +128,11 @@ function dibujarCarrito() {
 
         }
     )
+
+    if(elementosCarrito.length == 0) {
+        contenedorFooterCarrito.innerHTML = `<th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>`
+    }else {
+        contenedorFooterCarrito.innerHTML = `<th scope="row" colspan="5">total de compra: ${(totalCarrito)}</th>`
+    }
+
 }
