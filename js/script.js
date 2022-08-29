@@ -15,7 +15,8 @@ class ElementoCarrito {
 }
 
 const productos = []
-const elementosCarrito = []
+let elementosCarrito = []
+elementosCarrito = JSON.parse(localStorage.getItem('elementosCarrito')) || []
 
 const contenedorProductos = document.getElementById("contenedor-productos")
 const contenedorCarritoCompras = document.querySelector("#items")
@@ -64,7 +65,7 @@ function crearCard(producto) {
 
         let elementoCarrito = new ElementoCarrito(producto, 1)
         elementosCarrito.push(elementoCarrito)
-
+        localStorage.setItem("elementosCarrito",JSON.stringify(elementosCarrito));
         dibujarCarrito()
 
         swal({
@@ -91,7 +92,6 @@ function crearCard(producto) {
 
             }
         });
-
     }
 
     return carta;
@@ -134,5 +134,27 @@ function dibujarCarrito() {
     }else {
         contenedorFooterCarrito.innerHTML = `<th scope="row" colspan="5">total de compra: ${(totalCarrito)}</th>`
     }
-
+  
 }
+
+let botonVaciarCompra = document.getElementById("finalizar");
+
+    botonVaciarCompra.addEventListener("click", (i) => {
+        i.preventDefault();
+        localStorage.removeItem("elementosCarrito",JSON.stringify(elementosCarrito));
+    }
+)
+
+
+
+
+
+
+
+
+
+// function guardarCarrito(){
+
+//     localStorage.setItem("carrito", JSON.stringify (carrito) )
+
+// }
