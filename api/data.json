@@ -1,0 +1,75 @@
+[
+    {
+      "Samsung": [
+        {
+          "id": 1,
+          "name": "fernet",
+          "img": "./img/Fernet_Branca.jpg",
+          "price": 66800
+        },
+        {
+          "id": 2,
+          "name": "Smirnof",
+          "img": "./img/smirnof.jpeg",
+          "price": 120000
+        },
+        {
+          "id": 3,
+          "name": "absolut",
+          "img": "./img/absolut.jpg",
+          "price": 146200
+        },
+        {
+          "id": 4,
+          "name": "champagne",
+          "img": "./img/champagne.jpg",
+          "price": 198046
+        },
+        {
+            "id": 5,
+            "name": "vino tinto",
+            "img": "./img/vinotinto.jpeg",
+            "price": 198046
+          },
+          {
+            "id": 6,
+            "name": "vino blanco",
+            "img": "./img/vinoblanco.jpg",
+            "price": 198046
+          },
+          {
+            "id": 7,
+            "name": "pack imperial",
+            "img": "./img/imperial.jpg",
+            "price": 198046
+          },
+          {
+            "id": 8,
+            "name": "pack andes",
+            "img": "./img/andes.jpg",
+            "price": 198046
+          },
+          {
+            "id": 9,
+            "name": "cocacola",
+            "img": "./img/cocacola.jpg",
+            "price": 198046
+          },{
+            "id": 10,
+            "name": "sprite",
+            "img": "./img/sprite.jpg",
+            "price": 198046
+          },{
+            "id": 11,
+            "name": "speed",
+            "img": "./img/speed.jpeg",
+            "price": 198046
+          },{
+            "id": 12,
+            "name": "agua",
+            "img": "./img/agua.jpg",
+            "price": 198046
+          }
+      ]
+    }
+  ]

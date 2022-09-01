@@ -125,7 +125,6 @@ function dibujarCarrito() {
                 elemento.cantidad = nuevaCantidad
                 dibujarCarrito()
             })
-
         }
     )
 
@@ -144,17 +143,3 @@ let botonVaciarCompra = document.getElementById("finalizar");
         localStorage.removeItem("elementosCarrito",JSON.stringify(elementosCarrito));
     }
 )
-
-
-
-
-
-
-
-
-
-// function guardarCarrito(){
-
-//     localStorage.setItem("carrito", JSON.stringify (carrito) )
-
-// }
