@@ -9,75 +9,53 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script defer src="js/productos.js"></script>
-    <script defer src="js/script.js"></script>
+    <script defer src="./js/carrousel.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
     <title>FERRE BEBIDAS</title>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-secondary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">FERRE BEBIDAS</a>
-            <button id="toggleMyModal" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" >
-                Carrito <i class="bi bi-bag-check-fill"></i>
-            </button>
-            </div>
+    <header>
+
+        <ul class="nav justify-content-center bg-dark navbar-dark">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./paginas/productos.html">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./paginas/contacto.html">Contacto</a>
+            </li>
+        </ul>
+
+    </header>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-    </nav>
-    
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Carrito</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="container">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                <th scope="col">ID</th>
-                                <th scope="col">Nombre</th>
-                                <th scope="col">Cantidad</th>
-                                <th scope="col">Precio</th>
-                                <th scope="col">Total</th>
-                                </tr>
-                            </thead>
-                            <tbody id="items"></tbody>
-                            <tfoot>
-                                <tr id="footer">
-                                <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
-                                </tr>
-                            </tfoot>
-                            </table>
-                        <div class="row" id="cards"></div>
-                    </div>
-                
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" id="finalizar" class="btn btn-dark">Terminar compra</button>
-                </div>
-            </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./img/logo corrousel.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/carrousel 1.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/carrousel 2.jpg" class="d-block w-100" alt="...">
+          </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
     </div>
-
-    <br />
-
-    <section class="d-flex justify-content-center mt-5">
-        <article class="container">
-            <div id="contenedor-productos" class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="card m-3 p-3">
-                    <img src="img/Fernet_Branca.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5>Fernet</h5>
-                        <p>$2000</p>
-                        <button class="btn btn-dark" type="submit">Comprar</button>
-                    </div>
-                </div>
-            </div>
-        </article>
-    </section>
 </body>
 </html>
