@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script defer src="js/productos.js"></script>
-    <script defer src="js/script.js"></script>
+    <script defer src="../js/contacto.js"></script>
     <title>FERRE BEBIDAS</title>
 </head>
 <body>
@@ -32,22 +30,30 @@
 
     </header>
 
-    <main class="formulario container mb-4 mt-4">
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Gmail</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-        </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Contraseña</label>
-          <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="****">
-        </div>
-        <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-        <button type="button" class="btn btn-dark">Enviar</button>
-        <div class="espacio">.</div>
-    </main>
+    <section>
+      <div class="contact">
+
+        <form id="contacto" enctype="" action="https://formspree.io/f/xgeqozkk" method="POST" class="needs-validation"novalidate>
+          <div class="mb-3 col-sm-7 contactForm">
+              <label for="validationCustom01" class="form-label">Nombre:</label>
+              <input type="text" name="nombre" class="form-control" id="validationCustom01" required>
+          </div>
+          <div class="mb-3 col-sm-7 contactForm">
+              <label for="exampleFormControlInput1" class="form-label">Email:</label>
+              <input type="email" name="email" class="form-control" id="exampleFormControlInput1" required>
+          </div>
+          <div class="mb-3 contactForm">
+              <label for="exampleFormControlTextarea1" class="form-label">como podemos ayudarte</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" name="message" required></textarea>
+          </div>
+          <div class="col-12 contactForm">
+              <button class="btn btn-dark animate__headShake" id="button" type="submit">Enviar</button>
+          </div>
+       </form>
+
+      </div>
+    </section>
+
 
 </body>
 </html>
